@@ -16,13 +16,16 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: null,
+                    base: process.env.ASSETS_URL,
                     includeAbsolute: false,
                 },
             },
+            base: "http://stica.com/"
         }),
         wayfinder({
-            formVariants: true,
+            actions: false,
+            routes: true,
+            formVariants: false
         }),
     ],
 });
