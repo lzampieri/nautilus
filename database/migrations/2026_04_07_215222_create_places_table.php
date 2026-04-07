@@ -1,6 +1,5 @@
 <?php
 
-use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,14 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('credentials', function (Blueprint $table) {
+        Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId("user_id")->constrained();
-            $table->string("driver");
-            $table->string("param1");
-            $table->string("param2")->nullable();
-            $table->timestamp("last_used")->useCurrent();
+
+            $table->foreignId('catalogue_id')->constrained();
+
+            $table->float('lat');
+            $table->float('lon');
+
+            $table->string('name');
+            $table->text('note');
+
+            $table->boolean('visited');
         });
     }
 
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('credentials');
+        Schema::dropIfExists('places');
     }
 };

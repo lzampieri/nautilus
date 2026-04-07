@@ -11,4 +11,9 @@ class HomeController extends Controller {
         return Inertia::render('Home');
     }
 
+    public function map() {
+        return Inertia::render('Map/Map',[
+            'catalogues' => Auth::check() ? Auth::user()->catalogues : []
+        ]);
+    }
 }

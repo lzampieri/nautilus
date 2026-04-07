@@ -7,5 +7,4 @@ const props = defineProps({'dialog': Array})
 <template>
     {{dialog}}    
     <slot />
-    Ehehehehehe
 </template>

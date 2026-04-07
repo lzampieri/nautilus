@@ -17,4 +17,8 @@ class User extends Model implements AuthenticatableContract
     public function credentials() {
         return $this->hasMany(Credential::class);
     }
+
+    public function catalogues() {
+        return $this->hasMany(Catalogue::class,'owner_id');
+    }
 }
