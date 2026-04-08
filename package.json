@@ -31,6 +31,8 @@
         "vue-tsc": "^2.2.4"
     },
     "dependencies": {
+        "@google/maps": "^1.1.3",
+        "@googlemaps/js-api-loader": "^2.0.2",
         "@inertiajs/vite": "^3.0.0",
         "@inertiajs/vue3": "^3.0.0",
         "@maxel01/vue-leaflet": "^1.0.0-beta.7",

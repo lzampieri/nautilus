@@ -19,6 +19,9 @@ export default defineConfig({
                     base: process.env.ASSETS_URL,
                     includeAbsolute: false,
                 },
+                compilerOptions: {
+                    isCustomElement: (tag) => tag.startsWith('gmp-')
+                }
             },
             base: "http://stica.com/"
         }),

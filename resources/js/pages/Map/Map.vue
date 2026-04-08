@@ -3,6 +3,7 @@ import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer } from '@maxel01/vue-leaflet'
 import { ref } from 'vue'
 import Catalogues from './Catalogues.vue';
+import AddPlace from './AddPlace.vue';
 
 const zoom = ref(2)
 </script>
@@ -18,4 +19,5 @@ const zoom = ref(2)
     </LMap>
   </div>
   <Catalogues />
+  <AddPlace />
 </template>
